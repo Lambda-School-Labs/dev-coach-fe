@@ -58,7 +58,6 @@ const StyledChatScreen = styled.div`
     }
   }
   .chat-list-container {
-    background: #fcfcfc;
     width: 70%;
     display: flex;
     flex-direction: column;
