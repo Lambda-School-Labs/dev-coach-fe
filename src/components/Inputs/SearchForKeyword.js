@@ -64,7 +64,7 @@ const SearchForKeyword = props => {
         />
       </FormControl>
       <div className='iconDiv'>
-        <i class='fas fa-search'></i>
+        <i className='fas fa-search'></i>
       </div>
     </SearchStyled>
   );
