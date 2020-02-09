@@ -602,7 +602,6 @@ export async function runAllCode(
   const testResultsArr = testData.map(el => el.testResult);
   const passedTestsArr = [];
   for (const [idx, el] of testCaseArr.entries()) {
-    const h = testResultsArr[idx];
     const executedCode = await executeCode(
       currentTest,
       el,
