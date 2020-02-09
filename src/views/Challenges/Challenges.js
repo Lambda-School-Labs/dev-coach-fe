@@ -5,7 +5,7 @@ const Challenges = () => {
   const array = Object.values(testDataObj);
   return array.map(challenge => (
     <div>
-      <h2>{challenge}</h2>
+      <h2>{challenge.name}</h2>
       <p>{challenge.state}</p>
     </div>
   ));
