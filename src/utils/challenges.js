@@ -202,7 +202,7 @@ export const testDataObj = {
     ],
   },
   fizzBuzz: {
-    name: 'Vowel Count',
+    name: 'FizzBuzz',
     state: `function fizzBuzz(num) {
      // Write a function that does the following:
 
@@ -243,7 +243,7 @@ export const testDataObj = {
     ],
   },
   anagram: {
-    name: 'Vowel Count',
+    name: 'Anagram',
     state: `function anagram(a,b) {
   // A word is an anagram of another word if both use the same letters 
   // in the same quantity, but arranged differently.
@@ -261,7 +261,7 @@ export const testDataObj = {
     ],
   },
   balancedBrackets: {
-    name: 'Vowel Count',
+    name: 'Balanced Brackets',
     state: `function balancedBrackets(str) {
 // Write a function balancedBrackets that accepts
 // a string and returns true if all types of brackets 
@@ -284,7 +284,7 @@ export const testDataObj = {
     ],
   },
   romanNumeralize: {
-    name: 'Vowel Count',
+    name: 'Roman Numeral Presentation',
     state: `function romanNumeralize(n) {
 // Define a function that takes in a positive integer
 // and returns the Roman Numeral representation of that number.  
@@ -313,7 +313,7 @@ export const testDataObj = {
     ],
   },
   collatzSequence: {
-    name: 'Vowel Count',
+    name: 'Collatz Sequence',
     state: `function collatzSequence(num){
 // Write a function which takes a positive integer number
 // as an argument and returns it's "Collatz chain".
@@ -438,7 +438,7 @@ export const testDataObj = {
     ],
   },
   islandCount: {
-    name: 'Vowel Count',
+    name: 'Island Count',
     state: `function islandCount(binaryMatrix) {
 // Given a 2D array binaryMatrix of 0s and 1s, implement
 // a function getNumberOfIslands that returns
