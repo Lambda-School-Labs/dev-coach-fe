@@ -12,10 +12,11 @@ import {
 } from '@material-ui/core';
 import {
   mapLanguageToEditorState,
-  testDataObj,
   logCode,
   runAllCode,
 } from '../../utils/executionHelpers';
+import { testDataObj } from '../../utils/challenges';
+
 import devices from '../../utils/devices';
 
 const InterfaceContainer = styled.div`
@@ -141,6 +142,7 @@ const Interface = ({
             Collatz Sequence
           </MenuItem>
           <MenuItem value='vowelCount'>Vowel Count</MenuItem>
+          <MenuItem value='islandCount'>Island Count</MenuItem>
         </Select>
       </FormControl>
       <Button className='run-button' onClick={handlePost}>

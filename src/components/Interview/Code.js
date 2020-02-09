@@ -28,9 +28,9 @@ import {
   mapLanguageToId,
   mapLanguageToEditorState,
   executeCode,
-  testDataObj,
   fetchExecutedCode,
 } from '../../utils/executionHelpers';
+import { testDataObj } from '../../utils/challenges';
 import devices from '../../utils/devices';
 
 window.JSHINT = JSHINT;
@@ -273,6 +273,7 @@ class Code extends Component {
         el,
         editorState,
         language,
+        testResultsArr[idx],
       );
       const { token } = executedCode.data;
       setTimeout(async () => {
@@ -287,7 +288,7 @@ class Code extends Component {
             response.data.stdout.length - 1,
           );
         }
-        if (output === testResultsArr[idx]) {
+        if (response.data.status.description === 'Accepted') {
           passedTestsArr.push('true');
         }
         this.setState(prevState => {
@@ -422,6 +423,8 @@ class Code extends Component {
                 <MenuItem value='collatzSequence'>
                   Collatz Sequence
                 </MenuItem>
+                <MenuItem value='vowelCount'>Vowel Count</MenuItem>
+                <MenuItem value='islandCount'>Island Count</MenuItem>
               </Select>
             </FormControl>
             <Button className='run-button' onClick={this.handlePost}>
