@@ -25,6 +25,9 @@ const StyledChallengeCard = styled.div`
     align-items: center;
     width: 100%;
 
+    p {
+      color: #4fad65;
+    }
     a {
       text-decoration: none;
     }
