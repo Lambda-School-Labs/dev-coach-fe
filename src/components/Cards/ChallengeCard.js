@@ -1,14 +1,7 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
-import TelegramIcon from '@material-ui/icons/Telegram';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
-import CoachModal from '../Modals/CoachModal';
-import Rating from '../DataVisualization/Rating';
-import { mapExperience } from '../../utils/mappers';
-import devices from '../../utils/devices';
 
 const StyledChallengeCard = styled.div`
   display: flex;
