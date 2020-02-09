@@ -12,10 +12,11 @@ import {
 } from '@material-ui/core';
 import {
   mapLanguageToEditorState,
-  testDataObj,
   logCode,
   runAllCode,
 } from '../../utils/executionHelpers';
+import { testDataObj } from '../../utils/challenges';
+
 import devices from '../../utils/devices';
 
 const InterfaceContainer = styled.div`
