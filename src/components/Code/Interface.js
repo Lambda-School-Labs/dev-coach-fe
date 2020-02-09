@@ -141,6 +141,7 @@ const Interface = ({
             Collatz Sequence
           </MenuItem>
           <MenuItem value='vowelCount'>Vowel Count</MenuItem>
+          <MenuItem value='islandCount'>Island Count</MenuItem>
         </Select>
       </FormControl>
       <Button className='run-button' onClick={handlePost}>
