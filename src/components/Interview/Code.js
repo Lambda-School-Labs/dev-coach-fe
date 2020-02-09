@@ -273,6 +273,7 @@ class Code extends Component {
         el,
         editorState,
         language,
+        testResultsArr[idx]
       );
       const { token } = executedCode.data;
       setTimeout(async () => {
@@ -287,7 +288,7 @@ class Code extends Component {
             response.data.stdout.length - 1,
           );
         }
-        if (output === testResultsArr[idx]) {
+        if (response.data.status.description === 'Accepted') {
           passedTestsArr.push('true');
         }
         this.setState(prevState => {
