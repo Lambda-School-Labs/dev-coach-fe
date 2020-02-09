@@ -25,6 +25,7 @@ import SettingsTabs from './views/Settings/SettingsTabs';
 import Code from './views/Code/Code';
 import GiveFeedback from './views/Feedback/GiveFeedback';
 import About from './components/About/About';
+import Challenges from './views/Challenges/Challenges';
 
 const globalTheme = createMuiTheme({
   typography: {
@@ -49,6 +50,7 @@ function App({ user, isLoggedIn }) {
       <Route path={'/chat'} component={Chat} />
       <Route path={'/code'} component={Code} />
       <Route path={'/givefeedback'} component={GiveFeedback} />
+      <Route path={'/challenges'} component={Challenges} />
       <Redirect to='/dashboard' />
     </Switch>
   );
