@@ -33,7 +33,7 @@ const StyledChallenges = styled.div`
     align-items: flex-start;
     flex-wrap: wrap;
     height: 75vh;
-    width: 100vw;
+    width: 80vw;
 
     * {
       font-family: 'Inconsolata', sans-serif;
@@ -83,33 +83,35 @@ const Challenges = () => {
 
   if (challenge) {
     return (
-      <div className='challenge'>
-        <div className='code-header-container'>
-          <Interface
-            editorState={editorState}
-            setEditorState={setEditorState}
-            output={output}
-            setOutput={setOutput}
-            language={language}
-            setLanguage={setLanguage}
-            currentTest={currentTest}
-            setCurrentTest={setCurrentTest}
-            testPassedCount={testPassedCount}
-            setTestPassedCount={setTestPassedCount}
-          />
+      <StyledChallenges>
+        <div className='challenge'>
+          <div className='code-header-container'>
+            <Interface
+              editorState={editorState}
+              setEditorState={setEditorState}
+              output={output}
+              setOutput={setOutput}
+              language={language}
+              setLanguage={setLanguage}
+              currentTest={currentTest}
+              setCurrentTest={setCurrentTest}
+              testPassedCount={testPassedCount}
+              setTestPassedCount={setTestPassedCount}
+            />
+          </div>
+          <div className='code-body-container'>
+            <Editor
+              output={output}
+              setOutput={setOutput}
+              editorState={editorState}
+              setEditorState={setEditorState}
+              language={language}
+              setLanguage={setLanguage}
+            />
+            <Terminal initialText='$  ' output={output} />
+          </div>
         </div>
-        <div className='code-body-container'>
-          <Editor
-            output={output}
-            setOutput={setOutput}
-            editorState={editorState}
-            setEditorState={setEditorState}
-            language={language}
-            setLanguage={setLanguage}
-          />
-          <Terminal initialText='$  ' output={output} />
-        </div>
-      </div>
+      </StyledChallenges>
     );
   }
   return (
@@ -119,6 +121,11 @@ const Challenges = () => {
           key={uuid()}
           difficulty={challenge.difficulty}
           name={challenge.name}
+          chooseChallenge={() => {
+            setChallenge(challenge.name);
+            setEditorState(challenge.state);
+            setCurrentTest(challenge.id);
+          }}
         />
       ))}
       <div className='pagination'>

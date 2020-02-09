@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 
 const StyledChallengeCard = styled.div`
   display: flex;
@@ -28,9 +27,6 @@ const StyledChallengeCard = styled.div`
     p {
       color: #4fad65;
     }
-    a {
-      text-decoration: none;
-    }
   }
 
   .button {
@@ -48,15 +44,14 @@ export const ChallengeCard = props => {
       </div>
       <div className='content'>
         <p>{difficulty}</p>
-        <Link to='/challenge' onClick={chooseChallenge}>
-          <Button
-            className='button'
-            variant='contained'
-            color='primary'
-          >
-            Solve Challenge
-          </Button>
-        </Link>
+        <Button
+          onClick={chooseChallenge}
+          className='button'
+          variant='contained'
+          color='primary'
+        >
+          Solve Challenge
+        </Button>
       </div>
     </StyledChallengeCard>
   );
