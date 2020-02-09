@@ -26,18 +26,22 @@ const StyledChallengeCard = styled.div`
   background: white;
   box-shadow: 0 6px 10px #d3d3d3;
 
+  .book-button {
+    background-color: #4fad65;
+    color: white;
+  }
 `;
 
 export const ChallengeCard = props => {
   const { name, difficulty, chooseChallenge } = props;
   return (
-    <StyledChallengeCard >
-    <div className='header'>
-  <h2>{name}</h2>
-    </div>
-    <div className='content'>
-  <h2>{difficulty}</h2>
-  <Link to='/challenge' onClick={chooseChallenge}>
+    <StyledChallengeCard>
+      <div className='header'>
+        <h2>{name}</h2>
+      </div>
+      <div className='content'>
+        <h2>{difficulty}</h2>
+        <Link to='/challenge' onClick={chooseChallenge}>
           <Button
             className='button'
             variant='contained'
@@ -47,7 +51,7 @@ export const ChallengeCard = props => {
             Solve Challenge
           </Button>
         </Link>
-    </div>
+      </div>
     </StyledChallengeCard>
   );
 };
