@@ -9,7 +9,7 @@ const StyledChallengeCard = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 80%;
-  height: 10rem;
+  height: 9rem;
   padding: 1.5rem;
   border-radius: 0.8rem;
   margin: 0.5rem;

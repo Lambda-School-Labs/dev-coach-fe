@@ -8,20 +8,33 @@ import ChallengeCard from '../../components/Cards/ChallengeCard';
 const StyledChallenges = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+
+  .pagination {
+    margin: 2rem 0 1rem 0;
+    padding: 0;
+    .ant-pagination-item-active {
+      border-color: #4fad65;
+    }
+    .ant-pagination-item-active a {
+      color: #4fad65;
+    }
+  }
 `;
 
 const Challenges = () => {
   const [minValue, setMinValue] = useState(0);
-  const [maxValue, setMaxValue] = useState(6);
+  const [maxValue, setMaxValue] = useState(5);
 
   const handlePagination = value => {
     if (value <= 1) {
       setMinValue(0);
-      setMaxValue(6);
+      setMaxValue(5);
     } else {
-      setMinValue(value * 6 - 6);
-      setMaxValue(value * 6);
+      setMinValue(value * 5 - 5);
+      setMaxValue(value * 5);
     }
   };
   const makeToArray = Object.values(testDataObj);
@@ -34,12 +47,14 @@ const Challenges = () => {
           name={challenge.name}
         />
       ))}
-      <Pagination
-        defaultCurrent={1}
-        defaultPageSize={6}
-        onChange={handlePagination}
-        total={makeToArray.length}
-      />
+      <div className='pagination'>
+        <Pagination
+          defaultCurrent={1}
+          defaultPageSize={5}
+          onChange={handlePagination}
+          total={makeToArray.length}
+        />
+      </div>
     </StyledChallenges>
   );
 };
