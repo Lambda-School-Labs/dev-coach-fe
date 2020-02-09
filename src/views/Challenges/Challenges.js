@@ -2,6 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 import styled from 'styled-components';
 import { testDataObj } from '../../utils/challenges';
+import ChallengeCard from '../../components/Cards/ChallengeCard';
 
 const StyledChallenges = styled.div`
   display: flex;
@@ -13,10 +14,11 @@ const Challenges = () => {
   return (
     <StyledChallenges>
       {makeToArray.map(challenge => (
-        <div key={uuid()}>
-          <h2>{challenge.name}</h2>
-          <p>{challenge.difficulty}</p>
-        </div>
+        <ChallengeCard
+          key={uuid()}
+          difficulty={challenge.difficulty}
+          name={challenge.name}
+        />
       ))}
     </StyledChallenges>
   );
