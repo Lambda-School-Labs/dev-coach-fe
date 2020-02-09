@@ -1,12 +1,13 @@
 import React from 'react';
+import uuid from 'uuid';
 import { testDataObj } from '../../utils/challenges';
 
 const Challenges = () => {
   const array = Object.values(testDataObj);
   return array.map(challenge => (
-    <div>
+    <div key={uuid()}>
       <h2>{challenge.name}</h2>
-      <p>{challenge.state}</p>
+      <p>{challenge.difficulty}</p>
     </div>
   ));
 };
