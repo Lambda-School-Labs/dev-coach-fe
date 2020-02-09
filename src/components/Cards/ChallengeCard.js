@@ -8,8 +8,8 @@ const StyledChallengeCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 17rem;
-  height: 24rem;
+  width: 80%;
+  height: 10rem;
   padding: 1.5rem;
   border-radius: 0.8rem;
   margin: 0.5rem;
@@ -19,7 +19,18 @@ const StyledChallengeCard = styled.div`
   background: white;
   box-shadow: 0 6px 10px #d3d3d3;
 
-  .book-button {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .button {
     background-color: #4fad65;
     color: white;
   }
@@ -33,13 +44,12 @@ export const ChallengeCard = props => {
         <h2>{name}</h2>
       </div>
       <div className='content'>
-        <h2>{difficulty}</h2>
+        <p>{difficulty}</p>
         <Link to='/challenge' onClick={chooseChallenge}>
           <Button
             className='button'
             variant='contained'
             color='primary'
-            // endIcon={<ShoppingCartIcon />}
           >
             Solve Challenge
           </Button>

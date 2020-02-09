@@ -7,6 +7,7 @@ import ChallengeCard from '../../components/Cards/ChallengeCard';
 const StyledChallenges = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const Challenges = () => {
