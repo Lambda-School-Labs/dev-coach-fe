@@ -542,7 +542,6 @@ export async function runAllCode(
   const passedTestsArr = [];
   for (const [idx, el] of testCaseArr.entries()) {
     const h = testResultsArr[idx];
-    debugger;
     const executedCode = await executeCode(
       currentTest,
       el,
@@ -553,7 +552,6 @@ export async function runAllCode(
     const { token } = executedCode.data;
     setTimeout(async () => {
       const response = await fetchExecutedCode(token);
-      debugger;
       let output = response.data.stdout;
       if (
         typeof testResultsArr[idx] === 'string' &&
@@ -566,7 +564,6 @@ export async function runAllCode(
       }
       // eslint-disable-next-line eqeqeq
       if (response.data.status.description === 'Accepted') {
-        debugger;
         passedTestsArr.push('true');
       }
       setOutput(
