@@ -445,12 +445,12 @@ export const testDataObj = {
 // and analyze its time and space complexities.
 // Example:
 // input:  binaryMatrix = [ [0,    1,    0,    1,    0],
-                            [0,    0,    1,    1,    1],
-                            [1,    0,    0,    1,    0],
-                            [0,    1,    1,    0,    0],
-                            [1,    0,    1,    0,    1] ]
+//                          [0,    0,    1,    1,    1],
+//                          [1,    0,    0,    1,    0],
+//                          [0,    1,    1,    0,    0],
+//                          [1,    0,    1,    0,    1] ]
 // output: 6 # since this is the number of islands in binaryMatrix.
-             # See all 6 islands color-coded below.
+//           # See all 6 islands color-coded below.
 }`,
     testData: [
       {
