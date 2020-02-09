@@ -273,7 +273,7 @@ class Code extends Component {
         el,
         editorState,
         language,
-        testResultsArr[idx]
+        testResultsArr[idx],
       );
       const { token } = executedCode.data;
       setTimeout(async () => {
@@ -423,6 +423,8 @@ class Code extends Component {
                 <MenuItem value='collatzSequence'>
                   Collatz Sequence
                 </MenuItem>
+                <MenuItem value='vowelCount'>Vowel Count</MenuItem>
+                <MenuItem value='islandCount'>Island Count</MenuItem>
               </Select>
             </FormControl>
             <Button className='run-button' onClick={this.handlePost}>
