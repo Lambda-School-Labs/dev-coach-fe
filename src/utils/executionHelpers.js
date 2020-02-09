@@ -3,7 +3,7 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-multi-str */
 import Axios from 'axios';
-import testDataObj from './challenges';
+import { testDataObj } from './challenges';
 
 export const invokeCode = (code, testCase, value, language) => {
   if (language === 'javascript') {

@@ -28,9 +28,9 @@ import {
   mapLanguageToId,
   mapLanguageToEditorState,
   executeCode,
-  testDataObj,
   fetchExecutedCode,
 } from '../../utils/executionHelpers';
+import { testDataObj } from '../../utils/challenges';
 import devices from '../../utils/devices';
 
 window.JSHINT = JSHINT;
