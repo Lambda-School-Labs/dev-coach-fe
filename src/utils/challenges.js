@@ -241,6 +241,7 @@ of both 3 and 5`,
 
 }
     `,
+    python: `def fizzBuzz(num):`,
     testData: [
       {
         testCase: 3,
@@ -272,18 +273,17 @@ of both 3 and 5`,
   anagram: {
     name: 'Anagram',
     difficulty: 'Easy',
-    description: '',
+    description: `A word is an anagram of another word if both use the same letters 
+in the same quantity, but arranged differently.
+write a function that checks if two provided strings 
+are anagrams of each other; letter casing shouldn’t matter. 
+Also, consider only characters, not spaces or punctuation.
+For example: anagram('this', 'that') -> false anagram('fired', 'fried') -> true`,
     id: 'anagram',
     javascript: `function anagram(a,b) {
-  // A word is an anagram of another word if both use the same letters 
-  // in the same quantity, but arranged differently.
-
-  // write a function that checks if two provided strings 
-  // are anagrams of each other; letter casing shouldn’t matter. 
-  //  Also, consider only characters, not spaces or punctuation.
-  // For example: anagram('this', 'that') -> false anagram('fired', 'fried') -> true
 
 }`,
+    python: `def anagram(a,b):`,
     testData: [
       { testCase: `['hello', 'bye']`, testResult: 'false' },
       { testCase: `['finder', 'friend']`, testResult: 'true' },
@@ -293,20 +293,19 @@ of both 3 and 5`,
   balancedBrackets: {
     name: 'Balanced Brackets',
     difficulty: 'Medium',
-    description: '',
+    description: `Write a function balancedBrackets that accepts
+a string and returns true if all types of brackets 
+are balanced and false otherwise.    
+ignore other characters
+Examples:
+balancedBrackets('[({})]');    true
+balancedBrackets('[(]{)}');  false
+balancedBrackets(' const obj  = { x: someFunction() }');  true`,
     id: 'balancedBrackets',
     javascript: `function balancedBrackets(str) {
-// Write a function balancedBrackets that accepts
-// a string and returns true if all types of brackets 
-// are balanced and false otherwise.    
-// ignore other characters
-  
-// Examples:
-//  balancedBrackets('[({})]');   // true
-//  balancedBrackets('[(]{)}'); // false
-//  balancedBrackets(' const obj  = { x: someFunction() }'); // true
 
 }`,
+    python: `def balancedBrackets(str):`,
     testData: [
       { testCase: '[({})]', testResult: 'true' },
       { testCase: '[(]{)}', testResult: 'false' },
@@ -319,29 +318,30 @@ of both 3 and 5`,
   romanNumeralize: {
     name: 'Roman Numeral Presentation',
     difficulty: 'Medium',
-    description: '',
+    description: `Define a function that takes in a positive integer
+and returns the Roman Numeral representation of that number.  
+
+Symbol    Value
+I         1
+IV        4
+V         5
+IX        9
+X         10
+XL        40
+L         50
+XC        90
+C         100
+CD        400
+D         500
+CM        900
+M         1,000 
+
+Example: romanNumeralize(1973) should return 'MCMLXXIII'.`,
     id: 'romanNumeralize',
     javascript: `function romanNumeralize(n) {
-// Define a function that takes in a positive integer
-// and returns the Roman Numeral representation of that number.  
 
-// Symbol    Value
-// I         1
-// IV        4
-// V         5
-// IX        9
-// X         10
-// XL        40
-// L         50
-// XC        90
-// C         100
-// CD        400
-// D         500
-// CM        900
-// M         1,000 
-
-  // Example: romanNumeralize(1973) should return 'MCMLXXIII'.
 }`,
+    python: `def romanNumeralize(n):`,
     testData: [
       { testCase: 1973, testResult: 'MCMLXXIII' },
       { testCase: 2593, testResult: 'MMDXCIII' },
@@ -351,25 +351,26 @@ of both 3 and 5`,
   collatzSequence: {
     name: 'Collatz Sequence',
     difficulty: 'Easy',
-    description: '',
+    description: `Write a function which takes a positive integer number
+as an argument and returns it's "Collatz chain".
+The Collatz chain will stop at one. Named  after Lothar
+Collatz, the "Collatz conjecture" defines a sequence
+of numbers. That sequence is the Collatz "chain". 
+Starting with a positive integer, the Collatz conjecture
+determines the next integer in the chain until the number
+1 is obtained.Your Collatz algorithm will evaluate the 
+integer and then, depending on the condition of the integer,
+perform the following tasks: If the integer is even, 
+then halve the number. If the integer is not even, then
+multiply it by 3 and add one. An example chain starting
+from the number 23 looks like this:
+[23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]
+Boldface signifies the odd numbers.`,
     id: 'collatzSequence',
     javascript: `function collatzSequence(num){
-// Write a function which takes a positive integer number
-// as an argument and returns it's "Collatz chain".
-// The Collatz chain will stop at one. Named  after Lothar
-// Collatz, the "Collatz conjecture" defines a sequence
-// of numbers. That sequence is the Collatz "chain". 
-// Starting with a positive integer, the Collatz conjecture
-// determines the next integer in the chain until the number
-// 1 is obtained.Your Collatz algorithm will evaluate the 
-// integer and then, depending on the condition of the integer,
-// perform the following tasks: If the integer is even, 
-// then halve the number. If the integer is not even, then
-// multiply it by 3 and add one. An example chain starting
-// from the number 23 looks like this:
-//[23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]
-//Boldface signifies the odd numbers.
+
 }`,
+    python: `def collatzSequence(num):`,
     testData: [
       {
         testCase: 23,
@@ -455,15 +456,16 @@ of both 3 and 5`,
   vowelCount: {
     name: 'Vowel Count',
     difficulty: 'Easy',
-    description: '',
+    description: ` Write a function which counts the number of
+vowels in a given string. Return the count number.
+Passing the string "Hello world!" as an argument 
+to your vowelCount() function would result
+in the number 3 being returned.`,
     id: 'vowelCount',
     javascript: `function vowelCount(str) {
-// Write a function which counts the number of
-// vowels in a given string. Return the count number.
-// Passing the string "Hello world!" as an argument 
-// to your vowelCount() function would result
-// in the number 3 being returned.
+
 }`,
+    python: `def vowelCount(str):`,
     testData: [
       {
         testCase: '-bcd-fgh-jklmn-pqrst-vwxyz',
@@ -482,29 +484,29 @@ of both 3 and 5`,
   islandCount: {
     name: 'Island Count',
     difficulty: 'Medium',
-    description: '',
+    description: `Given a 2D array binaryMatrix of 0s and 1s, implement
+a function getNumberOfIslands that returns
+the number of islands of 1s in binaryMatrix.
+An island is defined as a group of adjacent values
+that are all 1s. A cell in binaryMatrix is considered 
+adjacent to another cell if they are next to each either
+on the same row or column. Note that two values of 1 are
+not part of the same island if they’re sharing only a 
+mutual “corner” (i.e. they are diagonally neighbors).   
+Explain and code the most efficient solution possible
+and analyze its time and space complexities.
+Example:
+input:  binaryMatrix = [ [0,    1,    0,    1,    0],
+                         [0,    0,    1,    1,    1],
+                         [1,    0,    0,    1,    0],
+                         [0,    1,    1,    0,    0],
+                         [1,    0,    1,    0,    1] ]
+output: 6 since this is the number of islands in binaryMatrix.`,
     id: 'islandCount',
     javascript: `function islandCount(binaryMatrix) {
-// Given a 2D array binaryMatrix of 0s and 1s, implement
-// a function getNumberOfIslands that returns
-// the number of islands of 1s in binaryMatrix.
-// An island is defined as a group of adjacent values
-// that are all 1s. A cell in binaryMatrix is considered 
-// adjacent to another cell if they are next to each either
-// on the same row or column. Note that two values of 1 are
-// not part of the same island if they’re sharing only a 
-// mutual “corner” (i.e. they are diagonally neighbors).   
-// Explain and code the most efficient solution possible
-// and analyze its time and space complexities.
-// Example:
-// input:  binaryMatrix = [ [0,    1,    0,    1,    0],
-//                          [0,    0,    1,    1,    1],
-//                          [1,    0,    0,    1,    0],
-//                          [0,    1,    1,    0,    0],
-//                          [1,    0,    1,    0,    1] ]
-// output: 6 # since this is the number of islands in binaryMatrix.
-//           # See all 6 islands color-coded below.
+
 }`,
+    python: `def islandCount(binaryMatrix):`,
     testData: [
       {
         testCase: [
