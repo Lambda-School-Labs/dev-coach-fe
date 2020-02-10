@@ -133,8 +133,12 @@ export const testDataObj = {
     description: '',
     id: 'fibonacci',
     javascript: `function fibonacci(n) {
-// Given an integer n, calculate the first n numbers in the fibonacci sequence. Return the numbers in an array.
+// Given an integer n, calculate the first n numbers
+// in the fibonacci sequence. Return the numbers in an array.
 }`,
+    python: `def fibonacci(n):
+    # Given an integer n, calculate the first n numbers
+    # in the fibonacci sequence. Return the numbers in an array.`,
     testData: [
       {
         testCase: 8,
@@ -206,8 +210,10 @@ export const testDataObj = {
   // write a function that takes a string of letters and 
   // returns a string with the letters sorted in alphabetical order.
 
-}
-    `,
+}`,
+    python: `def sortString(str):
+    # write a function that takes a string of letters and 
+    # returns a string with the letters sorted in alphabetical order.`,
     testData: [
       { testCase: 'zyx', testResult: 'xyz' },
       { testCase: 'fedcba', testResult: 'abcdef' },
