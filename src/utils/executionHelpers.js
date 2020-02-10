@@ -170,7 +170,7 @@ export async function runAllCode(
 
 const javascriptInitialEditorState = `console.log('hello JS!');`;
 
-const pythonInitialEditorState = `print('hello, python!)`;
+const pythonInitialEditorState = `print('hello, python!')`;
 
 const cppInitialState = `#include <iostream>
 
