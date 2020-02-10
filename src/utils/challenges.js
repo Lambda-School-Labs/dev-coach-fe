@@ -8,6 +8,8 @@ export const testDataObj = {
   // enter code below to return the square of a number
 }
     `,
+    python: `def square(x):
+    # enter code below to return the square of a number`,
     testData: [
       { testCase: 5, testResult: 25 },
       { testCase: 10, testResult: 100 },
