@@ -5,7 +5,7 @@ export const testDataObj = {
     description: '',
     id: 'square',
     javascript: `function square(x) {
-  // enter code below to return the square of a number
+// enter code below to return the square of a number
 }`,
     python: `def square(x):
     # enter code below to return the square of a number`,
@@ -20,8 +20,8 @@ export const testDataObj = {
     difficulty: 'Easy',
     description: '',
     id: 'add',
-    javascript: `function add (x, y) {
-  // enter code below to add two numbers and return the sum
+    javascript: `function add(x, y) {
+// enter code below to add two numbers and return the sum
 }
     `,
     python: `def add (x, y):
@@ -45,10 +45,12 @@ export const testDataObj = {
     description: '',
     id: 'reverseAString',
     javascript: `function reverseAString(str) {
-  // enter code below to take a string as input 
-  // and return the same string, reversed.
-}
-    `,
+// enter code below to take a string as input 
+// and return the same string, reversed.
+}`,
+    python: `def reverseAString(str):
+    # enter code below to take a string as input 
+    # and return the same string, reversed.`,
     testData: [
       { testCase: 'Hello, world!', testResult: '!dlrow ,olleH' },
       { testCase: 'Lor3m 1psum', testResult: 'musp1 m3roL' },
@@ -64,8 +66,14 @@ export const testDataObj = {
     description: '',
     id: 'rockPaperScissors',
     javascript: `function rockPaperScissors(numOfRounds) {
-/* Write a function called rockPaperScissors that will take a number, and output "n" number of possible combinations of 'rock', 'paper', and 'scissors. */
+// Write a function called rockPaperScissors that
+// will take a number, and output "n" number of possible
+// combinations of 'rock', 'paper', and 'scissors.
 }`,
+    python: `def rockPaperScissors(numOfRounds):
+    # Write a function called rockPaperScissors that
+    # will take a number, and output "n" number of possible
+    # combinations of 'rock', 'paper', and 'scissors.`,
     testData: [
       {
         testCase: 1,
