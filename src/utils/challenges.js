@@ -1,5 +1,9 @@
 export const testDataObj = {
   square: {
+    name: 'Square',
+    difficulty: 'Easy',
+    description: '',
+    id: 'square',
     state: `function square(x) {
   // enter code below to return the square of a number
 }
@@ -11,6 +15,10 @@ export const testDataObj = {
     ],
   },
   add: {
+    name: 'Add',
+    difficulty: 'Easy',
+    description: '',
+    id: 'add',
     state: `function add (x, y) {
   // enter code below to add two numbers and return the sum
 }
@@ -28,6 +36,10 @@ export const testDataObj = {
     ],
   },
   reverseAString: {
+    name: 'Reverse A String',
+    difficulty: 'Easy',
+    description: '',
+    id: 'reverseAString',
     state: `function reverseAString(str) {
   // enter code below to take a string as input 
   // and return the same string, reversed.
@@ -43,6 +55,10 @@ export const testDataObj = {
     ],
   },
   rockPaperScissors: {
+    name: 'Rock Paper Scissors',
+    difficulty: 'Medium',
+    description: '',
+    id: 'rockPaperScissors',
     state: `function rockPaperScissors(numOfRounds) {
 /* Write a function called rockPaperScissors that will take a number, and output "n" number of possible combinations of 'rock', 'paper', and 'scissors. */
 }`,
@@ -100,6 +116,10 @@ export const testDataObj = {
     ],
   },
   fibonacci: {
+    name: 'Fibonacci',
+    difficulty: 'Easy',
+    description: '',
+    id: 'fibonacci',
     state: `function fibonacci(n) {
 // Given an integer n, calculate the first n numbers in the fibonacci sequence. Return the numbers in an array.
 }`,
@@ -166,6 +186,10 @@ export const testDataObj = {
     ],
   },
   sortString: {
+    name: 'Sort A String',
+    difficulty: 'Easy',
+    description: '',
+    id: 'sortString',
     state: `function sortString(str) {
   // write a function that takes a string of letters and 
   // returns a string with the letters sorted in alphabetical order.
@@ -179,6 +203,10 @@ export const testDataObj = {
     ],
   },
   isArmstrongNumber: {
+    name: 'Armstrong Number ?',
+    difficulty: 'Easy',
+    description: '',
+    id: 'isArmstrongNumber',
     state: `function isArmstrongNumber(n) {
   // An Armstrong number is an n-digit number that is equal to the sum of the n'th powers of its digits.
   // Determine if the input number is an Armstrong number.  Return either true or false .
@@ -195,6 +223,10 @@ export const testDataObj = {
     ],
   },
   fizzBuzz: {
+    name: 'FizzBuzz',
+    difficulty: 'Easy',
+    description: '',
+    id: 'fizzBuzz',
     state: `function fizzBuzz(num) {
      // Write a function that does the following:
 
@@ -235,6 +267,10 @@ export const testDataObj = {
     ],
   },
   anagram: {
+    name: 'Anagram',
+    difficulty: 'Easy',
+    description: '',
+    id: 'anagram',
     state: `function anagram(a,b) {
   // A word is an anagram of another word if both use the same letters 
   // in the same quantity, but arranged differently.
@@ -252,6 +288,10 @@ export const testDataObj = {
     ],
   },
   balancedBrackets: {
+    name: 'Balanced Brackets',
+    difficulty: 'Medium',
+    description: '',
+    id: 'balancedBrackets',
     state: `function balancedBrackets(str) {
 // Write a function balancedBrackets that accepts
 // a string and returns true if all types of brackets 
@@ -274,6 +314,10 @@ export const testDataObj = {
     ],
   },
   romanNumeralize: {
+    name: 'Roman Numeral Presentation',
+    difficulty: 'Medium',
+    description: '',
+    id: 'romanNumeralize',
     state: `function romanNumeralize(n) {
 // Define a function that takes in a positive integer
 // and returns the Roman Numeral representation of that number.  
@@ -302,6 +346,10 @@ export const testDataObj = {
     ],
   },
   collatzSequence: {
+    name: 'Collatz Sequence',
+    difficulty: 'Easy',
+    description: '',
+    id: 'collatzSequence',
     state: `function collatzSequence(num){
 // Write a function which takes a positive integer number
 // as an argument and returns it's "Collatz chain".
@@ -402,6 +450,10 @@ export const testDataObj = {
     ],
   },
   vowelCount: {
+    name: 'Vowel Count',
+    difficulty: 'Easy',
+    description: '',
+    id: 'vowelCount',
     state: `function vowelCount(str) {
 // Write a function which counts the number of
 // vowels in a given string. Return the count number.
@@ -425,6 +477,10 @@ export const testDataObj = {
     ],
   },
   islandCount: {
+    name: 'Island Count',
+    difficulty: 'Medium',
+    description: '',
+    id: 'islandCount',
     state: `function islandCount(binaryMatrix) {
 // Given a 2D array binaryMatrix of 0s and 1s, implement
 // a function getNumberOfIslands that returns
