@@ -115,7 +115,9 @@ const Interface = ({
             Select Coding Challenge
           </InputLabel>
           <Select
-            disabled={language !== 'javascript'}
+            disabled={
+              language !== 'javascript' && language !== 'python'
+            }
             value={currentTest}
             onChange={handleTestSelection}
           >
