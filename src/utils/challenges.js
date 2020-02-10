@@ -2,13 +2,12 @@ export const testDataObj = {
   square: {
     name: 'Square',
     difficulty: 'Easy',
-    description: '',
+    description: `enter code below to return the square of a number`,
     id: 'square',
     javascript: `function square(x) {
-// enter code below to return the square of a number
+
 }`,
-    python: `def square(x):
-    # enter code below to return the square of a number`,
+    python: `def square(x):`,
     testData: [
       { testCase: 5, testResult: 25 },
       { testCase: 10, testResult: 100 },
@@ -18,15 +17,14 @@ export const testDataObj = {
   add: {
     name: 'Add',
     difficulty: 'Easy',
-    description: '',
+    description:
+      'enter code below to add two numbers and return the sum',
     id: 'add',
     javascript: `function add(x, y) {
-// enter code below to add two numbers and return the sum
+
 }
     `,
-    python: `def add (x, y):
-    # enter code below to add two numbers and return
-    # the sum`,
+    python: `def add (x, y):`,
     testCases: [
       [1, 2],
       [345, 829],
@@ -42,15 +40,13 @@ export const testDataObj = {
   reverseAString: {
     name: 'Reverse A String',
     difficulty: 'Easy',
-    description: '',
+    description: `enter code below to take a string as input 
+and return the same string, reversed.`,
     id: 'reverseAString',
     javascript: `function reverseAString(str) {
-// enter code below to take a string as input 
-// and return the same string, reversed.
+
 }`,
-    python: `def reverseAString(str):
-    # enter code below to take a string as input 
-    # and return the same string, reversed.`,
+    python: `def reverseAString(str):`,
     testData: [
       { testCase: 'Hello, world!', testResult: '!dlrow ,olleH' },
       { testCase: 'Lor3m 1psum', testResult: 'musp1 m3roL' },
@@ -63,17 +59,13 @@ export const testDataObj = {
   rockPaperScissors: {
     name: 'Rock Paper Scissors',
     difficulty: 'Medium',
-    description: '',
+    description: `Write a function called rockPaperScissors that will
+take a number, and output "n" number of possible combinations of 'rock', 'paper', and 'scissors.`,
     id: 'rockPaperScissors',
     javascript: `function rockPaperScissors(numOfRounds) {
-// Write a function called rockPaperScissors that
-// will take a number, and output "n" number of possible
-// combinations of 'rock', 'paper', and 'scissors.
+
 }`,
-    python: `def rockPaperScissors(numOfRounds):
-    # Write a function called rockPaperScissors that
-    # will take a number, and output "n" number of possible
-    # combinations of 'rock', 'paper', and 'scissors.`,
+    python: `def rockPaperScissors(numOfRounds):`,
     testData: [
       {
         testCase: 1,
@@ -130,15 +122,13 @@ export const testDataObj = {
   fibonacci: {
     name: 'Fibonacci',
     difficulty: 'Easy',
-    description: '',
+    description: `Given an integer n, calculate the first n numbers
+in the fibonacci sequence. Return the numbers in an array.`,
     id: 'fibonacci',
     javascript: `function fibonacci(n) {
-// Given an integer n, calculate the first n numbers
-// in the fibonacci sequence. Return the numbers in an array.
+
 }`,
-    python: `def fibonacci(n):
-    # Given an integer n, calculate the first n numbers
-    # in the fibonacci sequence. Return the numbers in an array.`,
+    python: `def fibonacci(n):`,
     testData: [
       {
         testCase: 8,
@@ -204,16 +194,13 @@ export const testDataObj = {
   sortString: {
     name: 'Sort A String',
     difficulty: 'Easy',
-    description: '',
+    description: `write a function that takes a string of letters and 
+returns a string with the letters sorted in alphabetical order.`,
     id: 'sortString',
     javascript: `function sortString(str) {
-  // write a function that takes a string of letters and 
-  // returns a string with the letters sorted in alphabetical order.
 
 }`,
-    python: `def sortString(str):
-    # write a function that takes a string of letters and 
-    # returns a string with the letters sorted in alphabetical order.`,
+    python: `def sortString(str):`,
     testData: [
       { testCase: 'zyx', testResult: 'xyz' },
       { testCase: 'fedcba', testResult: 'abcdef' },
@@ -223,17 +210,17 @@ export const testDataObj = {
   isArmstrongNumber: {
     name: 'Armstrong Number ?',
     difficulty: 'Easy',
-    description: '',
+    description: ` An Armstrong number is an n-digit number
+that is equal to the sum of the n'th powers of its digits.
+Determine if the input number is an Armstrong number. Return
+either true or false . For example with the number 153 
+there are 3 digits so you would add together the cubed
+values of all the digits like this: 1^3 + 5^3 + 3^3 === 153 `,
     id: 'isArmstrongNumber',
     javascript: `function isArmstrongNumber(n) {
-  // An Armstrong number is an n-digit number that is equal to the sum of the n'th powers of its digits.
-  // Determine if the input number is an Armstrong number.  Return either true or false .
 
-  // For example with the number 153 there are 3 digits so you would add together the cubed
-  // values of all the digits like this: 1^3 + 5^3 + 3^3 === 153 
-
-}
-    `,
+}`,
+    python: `def isArmstrongNumber(n):`,
     testData: [
       { testCase: 6, testResult: 'true' },
       { testCase: 153, testResult: 'true' },
@@ -243,16 +230,14 @@ export const testDataObj = {
   fizzBuzz: {
     name: 'FizzBuzz',
     difficulty: 'Easy',
-    description: '',
+    description: `Write a function that does the following:
+console logs the numbers from 1 to n, where n is the integer
+the function takes as its parameter logs fizz instead of the
+number for multiples of 3 logs buzz instead of the number for
+multiples of 5 logs fizzbuzz for numbers that are multiples
+of both 3 and 5`,
     id: 'fizzBuzz',
     javascript: `function fizzBuzz(num) {
-     // Write a function that does the following:
-
-     // console logs the numbers from 1 to n, where n 
-     // is the integer the function takes as its parameter
-     // logs fizz instead of the number for multiples of 3
-     // logs buzz instead of the number for multiples of 5
-     // logs fizzbuzz for numbers that are multiples of both 3 and 5
 
 }
     `,
