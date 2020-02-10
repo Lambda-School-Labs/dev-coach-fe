@@ -74,7 +74,7 @@ const Interface = ({
     const selectedTest = event.target.value;
     setCurrentTest(selectedTest);
     if (testDataObj[selectedTest]) {
-      setEditorState(testDataObj[selectedTest].state);
+      setEditorState(testDataObj[selectedTest][language]);
     }
   };
 

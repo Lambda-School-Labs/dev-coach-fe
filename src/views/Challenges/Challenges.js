@@ -26,7 +26,7 @@ const StyledChallenges = styled.div`
     }
   }
 
-  .challenge {
+  .code {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -84,7 +84,7 @@ const Challenges = () => {
   if (challenge) {
     return (
       <StyledChallenges>
-        <div className='challenge'>
+        <div className='code'>
           <div className='code-header-container'>
             <Interface
               editorState={editorState}
@@ -122,7 +122,7 @@ const Challenges = () => {
           name={challenge.name}
           chooseChallenge={() => {
             setChallenge(challenge.name);
-            setEditorState(challenge.state);
+            setEditorState(challenge.javascript);
             setCurrentTest(challenge.id);
           }}
         />
