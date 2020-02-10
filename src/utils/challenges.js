@@ -6,8 +6,7 @@ export const testDataObj = {
     id: 'square',
     javascript: `function square(x) {
   // enter code below to return the square of a number
-}
-    `,
+}`,
     python: `def square(x):
     # enter code below to return the square of a number`,
     testData: [
@@ -25,6 +24,8 @@ export const testDataObj = {
   // enter code below to add two numbers and return the sum
 }
     `,
+    python: `def add (x, y):
+    # enter code below to add two numbers and return the sum`,
     testCases: [
       [1, 2],
       [345, 829],
