@@ -25,7 +25,8 @@ export const testDataObj = {
 }
     `,
     python: `def add (x, y):
-    # enter code below to add two numbers and return the sum`,
+    # enter code below to add two numbers and return
+    # the sum`,
     testCases: [
       [1, 2],
       [345, 829],
