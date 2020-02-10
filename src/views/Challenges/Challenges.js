@@ -94,7 +94,6 @@ const Challenges = () => {
               language={language}
               setLanguage={setLanguage}
               currentTest={currentTest}
-              setCurrentTest={setCurrentTest}
               testPassedCount={testPassedCount}
               setTestPassedCount={setTestPassedCount}
             />

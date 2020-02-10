@@ -109,42 +109,46 @@ const Interface = ({
           <MenuItem value='rust'>Rust</MenuItem>
         </Select>
       </FormControl>
-      <FormControl className='form-control'>
-        <InputLabel className='input-label'>
-          Select Coding Challenge
-        </InputLabel>
-        <Select
-          disabled={language !== 'javascript'}
-          value={currentTest}
-          onChange={handleTestSelection}
-        >
-          {' '}
-          <MenuItem value=''>None</MenuItem>
-          <MenuItem value='square'>Square a number</MenuItem>
-          <MenuItem value='add'>Add two numbers</MenuItem>
-          <MenuItem value='reverseAString'>Reverse a string</MenuItem>
-          <MenuItem value='sortString'>SortString</MenuItem>
-          <MenuItem value='rockPaperScissors'>
-            Rock Paper Scissors
-          </MenuItem>
-          <MenuItem value='fibonacci'>Fibonacci</MenuItem>
-          <MenuItem value='anagram'>Anagram</MenuItem>
-          <MenuItem value='isArmstrongNumber'>
-            IsArmstrongNumber
-          </MenuItem>
-          <MenuItem value='balancedBrackets'>
-            Balanced Bracket
-          </MenuItem>
-          <MenuItem value='romanNumeralize'>
-            Roman Numeralize
-          </MenuItem>
-          <MenuItem value='collatzSequence'>
-            Collatz Sequence
-          </MenuItem>
-          <MenuItem value='vowelCount'>Vowel Count</MenuItem>
-          <MenuItem value='islandCount'>Island Count</MenuItem>
-        </Select>
-      </FormControl>
+      {setCurrentTest && (
+        <FormControl className='form-control'>
+          <InputLabel className='input-label'>
+            Select Coding Challenge
+          </InputLabel>
+          <Select
+            disabled={language !== 'javascript'}
+            value={currentTest}
+            onChange={handleTestSelection}
+          >
+            {' '}
+            <MenuItem value=''>None</MenuItem>
+            <MenuItem value='square'>Square a number</MenuItem>
+            <MenuItem value='add'>Add two numbers</MenuItem>
+            <MenuItem value='reverseAString'>
+              Reverse a string
+            </MenuItem>
+            <MenuItem value='sortString'>SortString</MenuItem>
+            <MenuItem value='rockPaperScissors'>
+              Rock Paper Scissors
+            </MenuItem>
+            <MenuItem value='fibonacci'>Fibonacci</MenuItem>
+            <MenuItem value='anagram'>Anagram</MenuItem>
+            <MenuItem value='isArmstrongNumber'>
+              IsArmstrongNumber
+            </MenuItem>
+            <MenuItem value='balancedBrackets'>
+              Balanced Bracket
+            </MenuItem>
+            <MenuItem value='romanNumeralize'>
+              Roman Numeralize
+            </MenuItem>
+            <MenuItem value='collatzSequence'>
+              Collatz Sequence
+            </MenuItem>
+            <MenuItem value='vowelCount'>Vowel Count</MenuItem>
+            <MenuItem value='islandCount'>Island Count</MenuItem>
+          </Select>
+        </FormControl>
+      )}
       <Button className='run-button' onClick={handlePost}>
         Run Code
       </Button>
