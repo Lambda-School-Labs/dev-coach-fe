@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import uuid from 'uuid';
 import styled from 'styled-components';
 import Pagination from 'antd/lib/pagination';
+import Button from '@material-ui/core/Button';
 import { testDataObj } from '../../utils/challenges';
 import ChallengeCard from '../../components/Cards/ChallengeCard';
 import Editor from '../../components/Code/Editor';
@@ -25,37 +26,49 @@ const StyledChallenges = styled.div`
       color: #4fad65;
     }
   }
+`;
 
-  .challenge {
+const StyledChallenge = styled.div`
+  display: flex;
+  flex-direction: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 75vh;
+  width: 80vw;
+
+  .explanation {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .button {
+    background-color: #4fad65;
+    color: white;
+  }
+
+  * {
+    font-family: 'Inconsolata', sans-serif;
+  }
+
+  .code-header-container {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2em;
+  }
+
+  .code-body-container {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    height: 75vh;
-    width: 80vw;
-
-    * {
-      font-family: 'Inconsolata', sans-serif;
-    }
-
-    .code-header-container {
-      height: 12%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding-bottom: 2em;
-    }
-
-    .code-body-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-    }
   }
 `;
 
@@ -79,39 +92,53 @@ const Challenges = () => {
       setMaxValue(value * 5);
     }
   };
+
+  const goBack = () => {
+    setChallenge(null);
+  };
+
   const makeToArray = Object.values(testDataObj);
 
   if (challenge) {
     return (
-      <StyledChallenges>
-        <div className='challenge'>
-          <div className='code-header-container'>
-            <Interface
-              editorState={editorState}
-              setEditorState={setEditorState}
-              output={output}
-              setOutput={setOutput}
-              language={language}
-              setLanguage={setLanguage}
-              currentTest={currentTest}
-              setCurrentTest={setCurrentTest}
-              testPassedCount={testPassedCount}
-              setTestPassedCount={setTestPassedCount}
-            />
-          </div>
-          <div className='code-body-container'>
-            <Editor
-              output={output}
-              setOutput={setOutput}
-              editorState={editorState}
-              setEditorState={setEditorState}
-              language={language}
-              setLanguage={setLanguage}
-            />
-            <Terminal initialText='$  ' output={output} />
-          </div>
+      <StyledChallenge>
+        <div className=''>
+          <h2>{challenge}</h2>
+          <p>{testDataObj[currentTest].description}</p>
+          <Button
+            onClick={goBack}
+            className='button'
+            variant='contained'
+            color='primary'
+          >
+            Back
+          </Button>
         </div>
-      </StyledChallenges>
+        <div className='code-header-container'>
+          <Interface
+            editorState={editorState}
+            setEditorState={setEditorState}
+            output={output}
+            setOutput={setOutput}
+            language={language}
+            setLanguage={setLanguage}
+            currentTest={currentTest}
+            testPassedCount={testPassedCount}
+            setTestPassedCount={setTestPassedCount}
+          />
+        </div>
+        <div className='code-body-container'>
+          <Editor
+            output={output}
+            setOutput={setOutput}
+            editorState={editorState}
+            setEditorState={setEditorState}
+            language={language}
+            setLanguage={setLanguage}
+          />
+          <Terminal initialText='$  ' output={output} />
+        </div>
+      </StyledChallenge>
     );
   }
   return (
@@ -123,7 +150,7 @@ const Challenges = () => {
           name={challenge.name}
           chooseChallenge={() => {
             setChallenge(challenge.name);
-            setEditorState(challenge.state);
+            setEditorState(challenge.javascript);
             setCurrentTest(challenge.id);
           }}
         />

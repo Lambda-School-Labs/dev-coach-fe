@@ -53,7 +53,7 @@ const Interface = ({
   editorState,
   setEditorState,
   currentTest,
-  setCurrentTest,
+  // setCurrentTest,
 }) => {
   const handlePost = () => {
     setOutput('');
@@ -67,16 +67,20 @@ const Interface = ({
 
   const handleLanguageSelection = event => {
     setLanguage(event.target.value);
-    setEditorState(mapLanguageToEditorState(event.target.value));
+    setEditorState(
+      currentTest
+        ? testDataObj[currentTest][event.target.value]
+        : mapLanguageToEditorState(event.target.value),
+    );
   };
 
-  const handleTestSelection = event => {
-    const selectedTest = event.target.value;
-    setCurrentTest(selectedTest);
-    if (testDataObj[selectedTest]) {
-      setEditorState(testDataObj[selectedTest].state);
-    }
-  };
+  // const handleTestSelection = event => {
+  //   const selectedTest = event.target.value;
+  //   setCurrentTest(selectedTest);
+  //   if (testDataObj[selectedTest]) {
+  //     setEditorState(testDataObj[selectedTest][language]);
+  //   }
+  // };
 
   React.useEffect(() => {
     function handlekeydownEvent(event) {
@@ -109,12 +113,15 @@ const Interface = ({
           <MenuItem value='rust'>Rust</MenuItem>
         </Select>
       </FormControl>
-      <FormControl className='form-control'>
+
+      {/* <FormControl className='form-control'>
         <InputLabel className='input-label'>
           Select Coding Challenge
         </InputLabel>
         <Select
-          disabled={language !== 'javascript'}
+          disabled={
+            language !== 'javascript' && language !== 'python'
+          }
           value={currentTest}
           onChange={handleTestSelection}
         >
@@ -144,7 +151,8 @@ const Interface = ({
           <MenuItem value='vowelCount'>Vowel Count</MenuItem>
           <MenuItem value='islandCount'>Island Count</MenuItem>
         </Select>
-      </FormControl>
+      </FormControl> */}
+
       <Button className='run-button' onClick={handlePost}>
         Run Code
       </Button>
